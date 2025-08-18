@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg-color: #232946;
+    --secondary-color: #b8c1ec;
+    --text-color: #eebbc3;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+  #game-board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px); /* 8 cards per row */
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  }
+
+  .card {
+    width: 60px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+  }
