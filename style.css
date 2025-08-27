@@ -3,31 +3,54 @@
     margin: 0;
     padding: 0;
 }
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.gameControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;  
+  gap: 20px;   
+}
 :root {
-    --bg-color: #232946;
-    --secondary-color: #b8c1ec;
-    --text-color: #eebbc3;
+    --bg-color: #094067;
+    --secondary-color: #5f6c7b;
+    --text-color: #fffffe;
+    --secondary-color: #3da9fc;
+    --card-background: #ef4565;
+    --card-flipped-background: #90b4ce;
+    
 }
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    min-height: 100vh;
 }
 h1 {
+    margin-top: 2rem;
     text-align: center;
     color: var(--text-color);
 }
 
   #game-board {
   display: grid;
-  grid-template-columns: repeat(8, 60px); /* 8 cards per row */
+  grid-template-columns: repeat(10, 80px); /* 8 cards per row */
   gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+  margin: 2rem auto;
   }
 
   .card {
-    width: 60px;
+    /* width: 60px; */
     height: 80px;
     background-color: white;
     display: flex;
@@ -37,4 +60,24 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     user-select: none;
+    background-color: var(--card-background);
+    color: transparent;
   }
+  .flipped {
+    background-color: var(--card-flipped-background);
+    color: white;
+  }
+  .matched {
+    visibility: hidden;
+  }
+  .victory-message {
+    text-align: center;
+    font-size: 24px;
+    color: var(--secondary-color);
+    animation: fadeIn 2s ease-in-out;
+  }
+.timer {
+    /* text-align: center; */
+    font-size: 20px;
+    color: var(--secondary-color);
+}

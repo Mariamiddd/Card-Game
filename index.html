@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Match memory game</h1>
-    <div id="game-board" ></div>
-    <p id="timer">Time: <span id="time">0</span>
-    </p>
+    <header class="header">
+        <h1>Match memory game</h1>
+    </header>
+
+    <main class="container">
+        <section aria-label="Game board">
+    <div id="game-board" >
+        <div class="victory-message"></div>
+        </section>
+    </div>
+        <div class="gameControls">
+        <button class="restart">restart</button> 
+    <div class="timer">Time: <span class="time">0:00</span></div>
+            <div class="bestTime">Record:</div>
+    </div>   
+    </main>   
     <script src="app.js" defer></script>
 </body>
 </html>
